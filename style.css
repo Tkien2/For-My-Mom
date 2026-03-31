@@ -1,0 +1,136 @@
+body, button{
+    font-family: "Playwrite IE", cursive;
+    color: rgb(62, 24, 5);
+}
+body{
+    background:  linear-gradient(45deg, rgb(238, 176, 255), rgb(227, 162, 245));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0 25px;
+}
+button{
+    text-shadow: 0 0 5px rgba(255, 255, 255);
+    padding: 15px 40px;
+    border: 0;
+    font-size: 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    color:white;
+    font-weight: 600;
+    transition-duration: 0.2s;
+    background: linear-gradient(rgb(217, 125, 248), rgb(157, 77, 243));
+    box-shadow: rgba(0, 0, 0, 0.161) 0 4px 5px;
+}
+button:hover{
+    letter-spacing: 1px;
+    scale: 1.05;
+}
+h1{
+    text-shadow: rgb(255, 241, 255) 0 0 15px;
+    transition-duration: 0.3s;
+    text-align: center;
+    font-size: 53px;
+}
+#letter{
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 25px 40px;
+    border-radius: 25px;
+    margin: 20px;
+    text-align: justify;
+    display: none;
+}
+#title{
+    margin: 0;
+    font-size: 40px;
+}
+#content{
+    font-size: 26px;
+}
+.FadeIn{
+    animation: FadeIn ease-in-out;
+}
+.FadeOut{
+    animation: FadeOut ease-in-out;
+}
+@keyframes FadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@keyframes FadeOut{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+.shape{
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    background: linear-gradient(transparent, rgb(249, 234, 255));
+    opacity: 0.2;
+    position: fixed;
+    z-index: -9999;
+    display: none;
+}
+.shapes{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    z-index: -9999;
+}
+.s1{
+    display: block;
+    top: -100px;
+    left: -110px;
+    scale: 1.2;
+    rotate: 30deg;
+}
+.s2{
+    display: block;
+    scale: 1.5;
+    bottom: -140px;
+    right: -140px;
+    rotate: 170deg;
+}
+.s3{
+    display: block;
+    scale: 0.8;
+    top: -80px;
+    right: calc(-140px);
+    rotate: 50deg;
+    /* background-color: blue; */
+}
+.s4{
+    display: block;
+    scale: 1.2;
+    bottom: -170px;
+    left: calc(-22vw + 10%);
+    rotate: 50deg;
+}
+.bubble{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(transparent,rgba(255, 255, 255, 0.123), rgba(255, 255, 255, 0.638));
+    position: fixed;
+    bottom: 0px;
+    position: absolute;
+    animation: Float linear;
+    animation-duration: 15s;
+    opacity: 0;
+}
+@keyframes Float{
+    0%{opacity: 0;}
+    4%{opacity: 0.7;}
+    50%{opacity: 0.3;}
+    80%{opacity: 0;}
+    100%{transform: translateY(-100vh); opacity: 0;}
+}
